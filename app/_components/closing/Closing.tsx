@@ -17,8 +17,9 @@ export default function Closing() {
       width: "100vw",
       height: "100vh",
       scrollTrigger: {
-        trigger: sectionRef.current,
+        trigger: containerRef.current,
         start: "top top",
+        endTrigger: sectionRef.current,
         end: "bottom bottom",
         pin: containerRef.current,
         scrub: true,
@@ -34,10 +35,10 @@ export default function Closing() {
       <h1 className="text-6xl text-center font-bold">
         BUILT FOR <br /> IMPACT
       </h1>
-      <div ref={containerRef} className="w-[50vw] h-[60vh]">
+      <div ref={containerRef} className="w-full h-[60vh] flex justify-center">
         <div
           ref={imageRef}
-          className="w-full h-full rounded-md overflow-hidden"
+          className="w-[50vh] h-full rounded-md overflow-hidden origin-center"
         >
           <img
             src="/images/non-contact-measurement.jpg"
@@ -55,7 +56,7 @@ export default function Closing() {
       </p>
 
       <div className="h-screen">
-        
+
       </div>
     </section>
   );
