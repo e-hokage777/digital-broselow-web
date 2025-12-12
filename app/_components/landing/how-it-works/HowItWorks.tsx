@@ -17,8 +17,8 @@ export default function HowItWorks() {
 
     const animation = gsap.to(photos, {
       yPercent: 0,
-    //   duration: 1,
       stagger: 1,
+      ease: "none",
     });
 
     ScrollTrigger.create({
@@ -28,17 +28,22 @@ export default function HowItWorks() {
       pin: ".gallery",
       animation: animation,
       scrub: true,
-      pinSpacing: false,
     });
   }, []);
 
   return (
-    <section className="px-8 bg-gray-100">
+    <section className="px-8 bg-white py-16">
+      <h1 className="text-5xl text-center">How It Works</h1>
+      <p className="text-center">
+        Digital Broselow uses an AI model that combines age information with
+        visual cues from images to predict a child’s height and
+        weight—accurately and instantly
+      </p>
       <div ref={rootRef} className="flex flex-row gap-8">
         <div>
           <div className="min-h-screen flex flex-col justify-center gap-4 flex-1">
-            <h2 className="text-3xl">Title</h2>
-            <p>
+            <h2 className="text-3xl uppercase">Title</h2>
+            <p className="text-xl">
               Green is a color that is often associated with nature, growth, and
               harmony. It is a calming and relaxing color that can evoke
               feelings of balance, stability, and freshness. In color
@@ -49,7 +54,7 @@ export default function HowItWorks() {
           </div>
           <div className="min-h-screen flex flex-col justify-center gap-4 flex-1">
             <h2 className="text-3xl">Title</h2>
-            <p>
+            <p className="text-xl">
               Green is a color that is often associated with nature, growth, and
               harmony. It is a calming and relaxing color that can evoke
               feelings of balance, stability, and freshness. In color
@@ -60,7 +65,7 @@ export default function HowItWorks() {
           </div>
           <div className="min-h-screen flex flex-col justify-center gap-4 flex-1">
             <h2 className="text-3xl">Title</h2>
-            <p>
+            <p className="text-xl">
               Green is a color that is often associated with nature, growth, and
               harmony. It is a calming and relaxing color that can evoke
               feelings of balance, stability, and freshness. In color
@@ -73,10 +78,10 @@ export default function HowItWorks() {
         {/** images here */}
         <div className="h-screen flex-1">
           <div className="flex justify-center items-center h-full gallery">
-            <div className="w-[40vw] h-[40vw] ">
-              <div className="w-full h-full bg-green-500 gallery-photo"></div>
-              <div className="w-full h-full bg-red-500 gallery-photo"></div>
-              <div className="w-full h-full bg-yellow-500 gallery-photo"></div>
+            <div className="w-[40vw] h-[40vw] relative overflow-hidden">
+              <div className="w-full h-full bg-green-500 absolute left-0 top-0 gallery-photo"></div>
+              <div className="w-full h-full bg-red-500 absolute left-0 top-0 gallery-photo"></div>
+              <div className="w-full h-full bg-yellow-500 absolute left-0 top-0 gallery-photo"></div>
             </div>
           </div>
         </div>
