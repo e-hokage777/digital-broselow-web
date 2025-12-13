@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Lexend_Deca } from "next/font/google";
+import { Lexend_Deca, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const lexendDeca = Lexend_Deca({
   variable: "--font-lexend-deca",
   subsets: ["latin"],
 });
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: "Digital Broselow",
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexendDeca.variable} antialiased`}>{children}</body>
+      <body className={`${lexendDeca.variable} ${montserrat.variable} antialiased`}>{children}</body>
     </html>
   );
 }

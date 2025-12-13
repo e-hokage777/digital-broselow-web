@@ -41,13 +41,13 @@ export default function Closing() {
           className="w-[50vh] h-full rounded-md overflow-hidden origin-center"
         >
           <img
-            src="/images/non-contact-measurement.jpg"
+            src="/images/happy-child.jpg"
             alt="Impact"
             className="w-full h-full object-cover"
           />
         </div>
       </div>
-      <p className="text-sm max-w-[50vw]">
+      <p className="text-sm max-w-[50vh]">
         Digital Broselow reflects Dipper Lab&apos;s commitment to safe,
         effective, and context-aware AI healthcare solutions. Once completed, it
         will serve as a reliable tool for pediatric care in Ghana—with the

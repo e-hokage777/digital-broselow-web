@@ -1,88 +1,44 @@
-"use client";
-
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { Card, CardContent } from "@/components/ui/card";
+import PhoneCanvas from "../../3d/phone-canvas";
+import { Lock } from "lucide-react";
 
 export default function HowItWorks() {
-  const rootRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    // appllying styles to gallery photos
-    const photos = gsap.utils.toArray(".gallery-photo:not(:first-child)");
-    gsap.set(photos, { yPercent: 101 });
-
-    const animation = gsap.to(photos, {
-      yPercent: 0,
-      stagger: 1,
-      ease: "none",
-    });
-
-    ScrollTrigger.create({
-      trigger: rootRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      pin: ".gallery",
-      animation: animation,
-      scrub: true,
-    });
-  }, []);
-
   return (
-    <section className="px-8 bg-white py-16">
-      <h1 className="text-5xl text-center">How It Works</h1>
-      <p className="text-center">
-        Digital Broselow uses an AI model that combines age information with
-        visual cues from images to predict a child’s height and
-        weight—accurately and instantly
-      </p>
-      <div ref={rootRef} className="flex flex-row gap-8">
+    <section className="min-h-screen h-screen">
+      <div className="h-full container mx-auto py-8">
         <div>
-          <div className="min-h-screen flex flex-col justify-center gap-4 flex-1">
-            <h2 className="text-3xl uppercase">Title</h2>
-            <p className="text-xl">
-              Green is a color that is often associated with nature, growth, and
-              harmony. It is a calming and relaxing color that can evoke
-              feelings of balance, stability, and freshness. In color
-              psychology, green is said to represent balance and stability,
-              making it a popular choice for branding and marketing in the
-              health and wellness industry.
-            </p>
-          </div>
-          <div className="min-h-screen flex flex-col justify-center gap-4 flex-1">
-            <h2 className="text-3xl">Title</h2>
-            <p className="text-xl">
-              Green is a color that is often associated with nature, growth, and
-              harmony. It is a calming and relaxing color that can evoke
-              feelings of balance, stability, and freshness. In color
-              psychology, green is said to represent balance and stability,
-              making it a popular choice for branding and marketing in the
-              health and wellness industry.
-            </p>
-          </div>
-          <div className="min-h-screen flex flex-col justify-center gap-4 flex-1">
-            <h2 className="text-3xl">Title</h2>
-            <p className="text-xl">
-              Green is a color that is often associated with nature, growth, and
-              harmony. It is a calming and relaxing color that can evoke
-              feelings of balance, stability, and freshness. In color
-              psychology, green is said to represent balance and stability,
-              making it a popular choice for branding and marketing in the
-              health and wellness industry.
-            </p>
-          </div>
+          <h1 className="text-xl font-bold text-secondary">How it works</h1>
+          <h2 className="text-4xl">All you need is your phone</h2>
         </div>
-        {/** images here */}
-        <div className="h-screen flex-1">
-          <div className="flex justify-center items-center h-full gallery">
-            <div className="w-[40vw] h-[40vw] relative overflow-hidden">
-              <div className="w-full h-full bg-green-500 absolute left-0 top-0 gallery-photo"></div>
-              <div className="w-full h-full bg-red-500 absolute left-0 top-0 gallery-photo"></div>
-              <div className="w-full h-full bg-yellow-500 absolute left-0 top-0 gallery-photo"></div>
-            </div>
+
+        <div className="mt-16">
+          <div className="flex flex-row justify-start py-8">
+            <Card className="bg-primary py-8 max-w-1/3">
+              <CardContent>
+                <div className="flex flex-col gap-4 items-center">
+                  <Lock size={64} className="text-white" />
+                  <p className="text-2xl text-white">
+                    Secure image collection via a simple web app used in
+                    hospitals and schools Automated face blurring to protect
+                    privacy
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="flex flex-row justify-end py-8">
+            <Card className="bg-secondary py-8 max-w-1/3">
+              <CardContent>
+                <div className="flex flex-col gap-4 items-center">
+                  <Lock size={64} className="text-white" />
+                  <p className="text-2xl text-white">
+                    Secure image collection via a simple web app used in
+                    hospitals and schools Automated face blurring to protect
+                    privacy
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
