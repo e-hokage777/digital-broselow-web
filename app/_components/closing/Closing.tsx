@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Closing() {
+export default function Closing(props: React.ComponentProps<"section">) {
   const imageRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,6 +31,7 @@ export default function Closing() {
     <section
       ref={sectionRef}
       className="px-8 min-h-screen flex flex-col items-center justify-center gap-8 py-8"
+      {...props}
     >
       <h1 className="text-6xl text-center font-bold">
         BUILT FOR <br /> IMPACT

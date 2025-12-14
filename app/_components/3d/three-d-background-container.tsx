@@ -13,7 +13,7 @@ export default function ThreeDBackgroundContainer(props: {
           style={{ backdropFilter: "blur(200px)" }}
         />
       </div>
-      <div className="relativeoverflow-x-hidden">{props.children}</div>
+      <div className="container mx-auto">{props.children}</div>
     </div>
   );
 }

@@ -2,10 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import PhoneCanvas from "../../3d/phone-canvas";
 import { Lock, PersonStanding, ThumbsUp, User } from "lucide-react";
 import HowItWorksSubSection from "./hiw-subsection";
+import React from "react";
 
-export default function HowItWorks() {
+export default function HowItWorks(props: React.ComponentProps<"section">) {
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen" {...props}>
       <div className="h-full container mx-auto py-8">
         <div>
           <h1 className="text-xl font-bold text-secondary">How it works</h1>

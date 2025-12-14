@@ -8,7 +8,7 @@ import { Group } from "three";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-export default function Hero() {
+export default function Hero(props: React.ComponentProps<"section">) {
   const phoneRef = useRef<Group>(null);
 
   useGSAP(() => {
@@ -29,7 +29,7 @@ export default function Hero() {
   }, [phoneRef.current]);
 
   return (
-    <section id="hero-section" className="w-full h-screen overflow-hidden">
+    <section className="w-full h-screen overflow-hidden" {...props}>
       <div className="w-full h-full flex flex-row justify-between gap-8 px-8 pt-16">
         <div className=" flex flex-col justify-center items-start gap-4  text-start flex-1">
           <h1 className=" text-5xl mb-8">

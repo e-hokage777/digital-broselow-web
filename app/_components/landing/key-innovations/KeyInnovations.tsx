@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function KeyInnovations() {
+export default function KeyInnovations(props: React.ComponentProps<"section">) {
   const rootRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
@@ -32,7 +32,7 @@ export default function KeyInnovations() {
   }, []);
 
   return (
-    <section className="px-8 py-16 section-key-innovations">
+    <section className="px-8 py-16 section-key-innovations" {...props}>
       <h1 className="text-5xl text-center">Key Innovations</h1>
       {/* <p className="text-center">
         Digital Broselow uses an AI model that combines age information with
