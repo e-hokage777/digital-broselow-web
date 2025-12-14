@@ -44,7 +44,7 @@ export default function Hero(props: React.ComponentProps<"section">) {
           </h2>
           <Button className="cursor-pointer">Learn More</Button>
         </div>
-        <div className="flex-1">
+        <div className="hidden md:block md:flex-1">
           {/* <HeroImage /> */}
           <PhoneCanvas>
             <PhoneModel ref={phoneRef} />

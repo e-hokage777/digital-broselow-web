@@ -7,7 +7,7 @@ export default function NavBar() {
     <div className="w-full  fixed left-0 top-0 z-100  flex justify-center" style={{backdropFilter: "blur(10px)"}}>
       <div className="flex justify-between items-center py-8 bg-transparent w-full container">
         <Link href="#hero" className="text-xl font-bold text-primary">Digital Broselow</Link>
-        <nav>
+        <nav className="invisible md:visible">
           <ul className="flex flex-row gap-4 font-semibold">
             <li>
               <Link href="#hero">Home</Link>

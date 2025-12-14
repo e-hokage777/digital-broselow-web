@@ -39,7 +39,7 @@ export default function HowItWorksSubSection({
     >
       <Card
         ref={cardRef}
-        className={cn("bg-primary py-8 max-w-1/3", right && "bg-secondary")}
+        className={cn("bg-primary py-8 max-w-2/3 md:max-w-1/3", right && "bg-secondary")}
       >
         <CardContent>
           <div className="flex flex-col gap-4 items-center">
