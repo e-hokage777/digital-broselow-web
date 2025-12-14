@@ -113,7 +113,7 @@ export default function KeyInnovations(props: React.ComponentProps<"section">) {
             <div className="w-full h-50hv rounded-lg overflow-hidden md:hidden">
               <img
                 className="size-full object-cover"
-                src="health-care-personnel-looking-at-phone.jpg"
+                src="/images/health-care-personnel-looking-at-phone.jpg"
               />
             </div>
           </div>
