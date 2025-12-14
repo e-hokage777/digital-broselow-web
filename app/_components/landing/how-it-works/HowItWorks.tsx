@@ -1,45 +1,36 @@
 import { Card, CardContent } from "@/components/ui/card";
 import PhoneCanvas from "../../3d/phone-canvas";
-import { Lock } from "lucide-react";
+import { Lock, PersonStanding, ThumbsUp, User } from "lucide-react";
+import HowItWorksSubSection from "./hiw-subsection";
 
 export default function HowItWorks() {
   return (
-    <section className="min-h-screen h-screen">
+    <section className="min-h-screen">
       <div className="h-full container mx-auto py-8">
         <div>
           <h1 className="text-xl font-bold text-secondary">How it works</h1>
-          <h2 className="text-4xl">All you need is your phone</h2>
+          <h2 className="text-4xl">What makes Digital Broselow <strong>tick</strong> ?</h2>
         </div>
 
         <div className="mt-16">
-          <div className="flex flex-row justify-start py-8">
-            <Card className="bg-primary py-8 max-w-1/3">
-              <CardContent>
-                <div className="flex flex-col gap-4 items-center">
-                  <Lock size={64} className="text-white" />
-                  <p className="text-2xl text-white">
-                    Secure image collection via a simple web app used in
-                    hospitals and schools Automated face blurring to protect
-                    privacy
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="flex flex-row justify-end py-8">
-            <Card className="bg-secondary py-8 max-w-1/3">
-              <CardContent>
-                <div className="flex flex-col gap-4 items-center">
-                  <Lock size={64} className="text-white" />
-                  <p className="text-2xl text-white">
-                    Secure image collection via a simple web app used in
-                    hospitals and schools Automated face blurring to protect
-                    privacy
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <HowItWorksSubSection
+            icon={<Lock size={64} className="text-white" />}
+            description="Secure image collection via a simple web app used in hospitals and schools"
+          />
+          <HowItWorksSubSection
+            icon={<User size={64} className="text-white" />}
+            description="Automated face blurring to protect privacy"
+            right
+          />
+          <HowItWorksSubSection
+            icon={<PersonStanding size={64} className="text-white" />}
+            description="Background segmentation, normalization, and augmentation to ensure high-quality model training"
+          />
+          <HowItWorksSubSection
+            icon={<ThumbsUp size={64} className="text-white" />}
+            description="Grad-CAM visualization for interpretable predictions based on true anatomical feature"
+            right
+          />
         </div>
       </div>
     </section>
