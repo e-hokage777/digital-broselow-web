@@ -25,7 +25,7 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(
       <group dispose={null}>
         <Float
           speed={1} // Animation speed, defaults to 1
-          rotationIntensity={1} // XYZ rotation intensity, defaults to 1
+          rotationIntensity={0.5} // XYZ rotation intensity, defaults to 1
           floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
           floatingRange={[-0.05, 0.05]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
         >
