@@ -71,4 +71,4 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(
   }
 );
 
-useGLTF.preload("/apple_iphone_based_mobile_phone.glb");
+useGLTF.preload("/models/apple_iphone_based_mobile_phone.glb");
