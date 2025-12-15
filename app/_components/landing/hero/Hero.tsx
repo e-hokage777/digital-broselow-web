@@ -1,12 +1,13 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import PhoneCanvas from "../../3d/phone-canvas";
 import { useEffect, useRef } from "react";
 import { PhoneModel } from "../../3d/phone-model";
 import { Group } from "three";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Hero(props: React.ComponentProps<"section">) {
   const phoneRef = useRef<Group>(null);
@@ -39,10 +40,11 @@ export default function Hero(props: React.ComponentProps<"section">) {
           </h1>
           <h2 className="text-xl ">
             Digital Broselow uses an AI model that combines age information with
-            visual cues from images to predict a child’s height and
+            visual cues from images to predict a child&apos;s height and
             weight—accurately and instantly.
           </h2>
-          <Button className="cursor-pointer">Learn More</Button>
+          {/* <Button className="cursor-pointer">Learn More</Button> */}
+          <Link href="#key-innovations" className={buttonVariants({ variant: "default" })}>Learn More</Link>
         </div>
         <div className="hidden md:block md:flex-1">
           {/* <HeroImage /> */}
