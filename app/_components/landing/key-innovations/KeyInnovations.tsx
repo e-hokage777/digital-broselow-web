@@ -63,7 +63,7 @@ export default function KeyInnovations(props: React.ComponentProps<"section">) {
             <div className="w-full h-50hv rounded-lg overflow-hidden md:hidden">
               <img
                 className="size-full object-cover"
-                src="/images/health-care-personnel-and-child.jpg"
+                src="/images/health-care-personnel-and-child.webp"
               />
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function KeyInnovations(props: React.ComponentProps<"section">) {
             <div className="w-full h-50hv rounded-lg overflow-hidden md:hidden">
               <img
                 className="size-full object-cover"
-                src="/images/non-contact-measurement.jpg"
+                src="/images/non-contact-measurement.webp"
               />
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function KeyInnovations(props: React.ComponentProps<"section">) {
             <div className="w-full h-50hv rounded-lg overflow-hidden md:hidden">
               <img
                 className="size-full object-cover"
-                src="/images/health-care-personnel-looking-at-phone.jpg"
+                src="/images/health-care-personnel-looking-at-phone.webp"
               />
             </div>
           </div>
@@ -125,19 +125,19 @@ export default function KeyInnovations(props: React.ComponentProps<"section">) {
               <div className="w-full h-full bg-green-500 absolute left-0 top-0 gallery-photo">
                 <img
                   className="size-full object-cover"
-                  src="/images/health-care-personnel-and-child.jpg"
+                  src="/images/health-care-personnel-and-child.webp"
                 />
               </div>
               <div className="w-full h-full bg-red-500 absolute left-0 top-0 gallery-photo">
                 <img
                   className="size-full object-cover"
-                  src="/images/non-contact-measurement.jpg"
+                  src="/images/non-contact-measurement.webp"
                 />
               </div>
               <div className="w-full h-full bg-yellow-500 absolute left-0 top-0 gallery-photo">
                 <img
                   className="size-full object-cover"
-                  src="/images/health-care-personnel-looking-at-phone.jpg"
+                  src="/images/health-care-personnel-looking-at-phone.webp"
                 />
               </div>
             </div>

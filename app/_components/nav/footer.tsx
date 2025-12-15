@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -25,9 +25,15 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-primary">Social Media</h4>
           <div className="flex flex-row gap-2">
-            <Linkedin className="w-10 h-10" />
-            <Facebook className="w-10 h-10" />
-            <Twitter className="w-10 h-10" />
+            <Link href="https://www.linkedin.com/company/distributed-iot-platforms-privacy-and-edge-intelligence-research/posts/?feedView=all">
+              <Linkedin className="size-10" />
+            </Link>
+            <Link href="https://github.com/Dipper-Lab">
+              <Github className="size-10" />
+            </Link>
+            <Link href="https://twitter.com/dipperlabknust">
+              <Twitter className="size-10" />
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-2">

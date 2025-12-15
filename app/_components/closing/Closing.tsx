@@ -42,7 +42,7 @@ export default function Closing(props: React.ComponentProps<"section">) {
           className="w-[50vh] h-full rounded-md overflow-hidden origin-center"
         >
           <img
-            src="/images/happy-child.jpg"
+            src="/images/happy-child.webp"
             alt="Impact"
             className="w-full h-full object-cover"
           />
