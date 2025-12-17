@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { useGLTF, useTexture, Decal, Html, Float } from "@react-three/drei";
 import * as THREE from "three";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -24,10 +23,10 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(
     return (
       <group dispose={null}>
         <Float
-          speed={1} // Animation speed, defaults to 1
-          rotationIntensity={0.5} // XYZ rotation intensity, defaults to 1
-          floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-          floatingRange={[-0.05, 0.05]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+          speed={1}
+          rotationIntensity={0}
+          floatIntensity={0}
+          floatingRange={[-0.05, 0.05]}
         >
           <group ref={ref} scale={0.07} rotation={[-0, -Math.PI / 8, 0]}>
             <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -53,7 +52,7 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(
                   scale={[7, 0.01, 14]}
                 />
 
-                <meshBasicMaterial map={texture} toneMapped={false} />
+                <meshBasicMaterial map={texture} toneMapped={false}  />
               </mesh>
               <mesh
                 castShadow

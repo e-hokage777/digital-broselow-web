@@ -86,4 +86,4 @@ export default function BackgroundModel(props: { [key: string]: unknown }) {
   );
 }
 
-useGLTF.preload("/background.glb");
+useGLTF.preload("/models/background.glb");
