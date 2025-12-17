@@ -7,6 +7,10 @@ export default function ThreeDBackgroundContainer(props: {
   return (
     <div className="relative h-screen">
       <div className="size-full fixed left-0 top-0 -z-1">
+        <div
+          className="size-full absolute left-0 top-0"
+          style={{ backgroundColor: "#c0e8f0" }}
+        />
         <GradientBackground />
         <div
           className="size-full absolute left-0 top-0"

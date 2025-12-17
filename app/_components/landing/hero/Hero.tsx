@@ -1,7 +1,7 @@
 "use client";
 
 import PhoneCanvas from "../../3d/phone-canvas";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, Suspense } from "react";
 import { PhoneModel } from "../../3d/phone-model";
 import { Group } from "three";
 import { useGSAP } from "@gsap/react";
@@ -12,22 +12,24 @@ import { buttonVariants } from "@/components/ui/button";
 export default function Hero(props: React.ComponentProps<"section">) {
   const phoneRef = useRef<Group>(null);
 
-  useGSAP(() => {
-    if (!phoneRef.current) return;
-    gsap.to(phoneRef.current!.rotation, {
-      y: Math.PI * 2,
-      scrollTrigger: {
-        trigger: "#hero-section",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-      },
-    });
-  }, [phoneRef.current]);
-
   useEffect(() => {
+    console.log("Hero useEffect - phoneRef.current:", phoneRef.current);
+  }, []);
+
+  useGSAP(() => {
     console.log(phoneRef.current)
-  }, [phoneRef.current]);
+    if (phoneRef.current) {
+      gsap.to(phoneRef.current.rotation, {
+        y: Math.PI * 2,
+        scrollTrigger: {
+          trigger: "#hero-section",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      });
+    }
+  }, []);
 
   return (
     <section className="w-full h-screen overflow-hidden" {...props}>
@@ -44,7 +46,12 @@ export default function Hero(props: React.ComponentProps<"section">) {
             weight—accurately and instantly.
           </h2>
           {/* <Button className="cursor-pointer">Learn More</Button> */}
-          <Link href="#key-innovations" className={buttonVariants({ variant: "default" })}>Learn More</Link>
+          <Link
+            href="#key-innovations"
+            className={buttonVariants({ variant: "default" })}
+          >
+            Learn More
+          </Link>
         </div>
         <div className="hidden md:block md:flex-1">
           {/* <HeroImage /> */}

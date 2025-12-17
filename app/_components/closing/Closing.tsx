@@ -8,37 +8,40 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Closing(props: React.ComponentProps<"section">) {
-  const imageRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
+  // const imageRef = useRef<HTMLDivElement>(null);
+  // const containerRef = useRef<HTMLDivElement>(null);
+  // const sectionRef = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
-    gsap.to(imageRef.current, {
-      width: "100vw",
-      height: "100vh",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        endTrigger: sectionRef.current,
-        end: "bottom bottom",
-        pin: containerRef.current,
-        scrub: true,
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.to(imageRef.current, {
+  //     width: "100vw",
+  //     height: "100vh",
+  //     scrollTrigger: {
+  //       trigger: containerRef.current,
+  //       start: "top top",
+  //       endTrigger: sectionRef.current,
+  //       end: "bottom bottom",
+  //       pin: containerRef.current,
+  //       scrub: true,
+  //     },
+  //   });
+  // });
 
   return (
     <section
-      ref={sectionRef}
+      // ref={sectionRef}
       className="px-8 min-h-screen flex flex-col items-center justify-center gap-8 py-8"
       {...props}
     >
       <h1 className="text-6xl text-center font-bold">
         BUILT FOR <br /> IMPACT
       </h1>
-      <div ref={containerRef} className="w-full h-[60vh] flex justify-center">
+      <div
+        // ref={containerRef}
+        className="w-full h-[60vh] flex justify-center"
+      >
         <div
-          ref={imageRef}
+          // ref={imageRef}
           className="w-[50vh] h-full rounded-md overflow-hidden origin-center"
         >
           <img
@@ -56,9 +59,6 @@ export default function Closing(props: React.ComponentProps<"section">) {
         challenges.
       </p>
 
-      <div className="h-screen">
-
-      </div>
     </section>
   );
 }
